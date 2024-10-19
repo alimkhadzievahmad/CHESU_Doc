@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# from chesu_doc import views.index
+
+from users import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), 
+    # path('test', views.index, name='home'),
+
+    # path('login/', views.sign_in, name='login'),
+    # path('logout/', views.sign_out, name='logout'),
+    path('register/', views.sign_up, name='register'),
 ]
